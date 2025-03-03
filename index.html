@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Космо Кликер</title>
+    <style>
+        body { text-align: center; font-family: Arial; background: #f0f0f0; }
+        #score { font-size: 30px; margin: 20px; }
+        #clicker { width: 200px; height: 200px; cursor: pointer; }
+        #donate { margin-top: 20px; font-size: 20px; color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Тапай по космонавту!</h1>
+    <p id="score">Очки: 0</p>
+    <img id="clicker" src="Space Tap.png" alt="Космонавт">
+    <p><a id="donate" href="https://yoomoney.ru/to/4100119038210544">Поддержать автора!</a></p>
+    <script>
+        let score = 0;
+        const clicker = document.getElementById('clicker');
+        const scoreDisplay = document.getElementById('score');
+
+        clicker.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = `Очки: ${score}`;
+        });
+    </script>
+</body>
+</html>
